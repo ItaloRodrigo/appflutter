@@ -17,13 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
     setState(() {
       _counter++;
-    });
-  }
-
-  _editingText(context) {
-    setState(() {
       _editing = _txtediting.text;
-      // _txtediting.text
     });
   }
 
@@ -72,8 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text('resultado: [$_editing] : $_counter'),
             TextField(
               controller: _txtediting,
-              onChanged: _editingText(context),
-            )
+            ),
           ],
         ),
       ),
