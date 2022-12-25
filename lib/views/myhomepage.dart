@@ -31,6 +31,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text("IR"),
               ),
             ),
+            ListTile(
+              title: Text("Teste 1"),
+              subtitle: Text("testando"),
+            ),
+            ListTile(
+              title: Text("Teste 2"),
+              subtitle: Text("testando"),
+            ),
+            ListTile(
+              title: Text("Teste 3r"),
+              subtitle: Text("testando"),
+            ),
           ],
         ),
       ),
@@ -40,15 +52,15 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             const Text(
-              'You have pushed the button this many times router -ab:',
+              'clique para adicionar:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            Text('teste45 $_counter'),
+            Text('resultado: $_counter'),
           ],
         ),
       ),
