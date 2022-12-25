@@ -11,10 +11,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _editing = "";
+  TextEditingController _txtediting = TextEditingController();
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+    });
+  }
+
+  _editingText(context) {
+    setState(() {
+      _editing = _txtediting.text;
+      // _txtediting.text
     });
   }
 
@@ -60,7 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            Text('resultado: $_counter'),
+            Text('resultado: [$_editing] : $_counter'),
+            TextField(
+              controller: _txtediting,
+              onChanged: _editingText(context),
+            )
           ],
         ),
       ),
